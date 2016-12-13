@@ -3,15 +3,15 @@
     .item-image {
         width: 18rem;
         height: 18rem;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
         position: absolute;
         top: 4rem;
         left: 0;
         right: 0;
         margin: auto;
-        background-image: url('../images/qrcode.jpg');
+    }
+
+    img {
+        width: 100%;
     }
 
     .item-text {
