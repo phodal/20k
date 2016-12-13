@@ -6,20 +6,7 @@
 
 
     $(document).ready(function () {
-        var bgMusic = $('audio').get(0);
-        var $btnMusic = $('.btn-music');
         var $upArrow = $('.up-arrow');
-
-        // background music control
-        $btnMusic.click(function () {
-            if (bgMusic.paused) {
-                bgMusic.play();
-                $(this).removeClass('paused');
-            } else {
-                bgMusic.pause();
-                $(this).addClass('paused');
-            }
-        });
 
         // init Swiper
         new Swiper('.swiper-container', {
@@ -56,9 +43,7 @@
                 animationControl.playAnimation(swiper);
             },
             onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
-                if (!$btnMusic.hasClass('paused') && bgMusic.paused) {
-                    bgMusic.play();
-                }
+
             }
         });
 
