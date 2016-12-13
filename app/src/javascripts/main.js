@@ -42,12 +42,26 @@
             onTransitionEnd: function (swiper) {       // play animations of the current slide
                 animationControl.playAnimation(swiper);
             },
-            onTouchStart: function (swiper, event) {    // mobile devices don't allow audios to play automatically, it has to be triggered by a user event(click / touch).
+            onTouchStart: function (swiper, event) {
 
             }
         });
 
         // hide loading animation since everything is ready
         $('.loading-overlay').slideUp();
+
+        window.odometerOptions = {
+            auto: true, // Don't automatically initialize everything with class 'odometer'
+            format: '(,ddd).dd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+            duration: 3000, // Change how long the javascript expects the CSS animation to take
+            theme: 'car', // Specify the theme (if you have more than one theme css file on the page)
+            animation: 'count' // Count is a simpler animation method which just increments the value,
+                               // use it when you're looking for something more subtle.
+        };
+
+        $('.odometer').html(10000);
+        setTimeout(function(){
+            odometer.innerHTML = 20000;
+        }, 800);
     });
 })();

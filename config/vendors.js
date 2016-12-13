@@ -3,6 +3,9 @@ module.exports = {
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/dist/css/swiper.css',
         'node_modules/animate.css/animate.css',
+        'node_modules/odometer/themes/odometer-theme-default.css',
+        'node_modules/odometer/themes/odometer-theme-car.css',
+        'node_modules/odometer/themes/odometer-theme-slot-machine.css'
         // if you need font-awesome
         // node_modules/font-awesome/css/font-awesome.css
         
