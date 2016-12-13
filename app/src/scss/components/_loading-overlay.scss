@@ -17,6 +17,20 @@
     right: 0;
   }
 
+  .user-name {
+    width: 200px;
+    margin: 10px auto 0;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  svg {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
   svg path, main svg line {
     stroke: #eee;
     stroke-width: 4px;
@@ -24,5 +38,4 @@
   svg path {
     fill: transparent;
   }
-
 }
