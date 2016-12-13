@@ -32,6 +32,7 @@
     "jquery": "^2.1.4",
     "normalize.css": "^3.0.3",
     "odometer": "^0.4.7",
-    "swiper": "^3.2.7"
+    "swiper": "^3.2.7",
+    "walkway.js": "0.0.6"
   }
 }

@@ -1,19 +1,28 @@
 @charset "UTF-8";
 
 .loading-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: 9999;
-    img {
-        width: 10rem;
-        height: 10rem;
-        margin: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #727a86;
+  z-index: 9999;
+  img {
+    width: 10rem;
+    height: 10rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  svg path, main svg line {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  svg path {
+    fill: transparent;
+  }
+
 }

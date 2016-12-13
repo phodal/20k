@@ -5,6 +5,14 @@
     var animationControl = require('./animation-control.js');
 
 
+    window.onload = function () {
+        var svg = new Walkway({
+            selector: '#logo',
+            easing: 'easeInOutCubic',
+            duration: 2100
+        }).draw();
+    };
+
     $(document).ready(function () {
         var $upArrow = $('.up-arrow');
 
