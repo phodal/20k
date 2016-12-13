@@ -1,5 +1,5 @@
 .slide-5 {
-    background-color: #9993c1;
+    background-color: #fff;
     .item-image {
         width: 18rem;
         height: 18rem;
@@ -11,12 +11,13 @@
         left: 0;
         right: 0;
         margin: auto;
-        background-image: url('../images/github-3.png');
+        background-image: url('../images/qrcode.jpg');
     }
+
     .item-text {
         width: 18rem;
-        color: #fff;
-        font-size: 1.2rem;
+        color: #707ca8;
+        font-size: 1.6rem;
         font-weight: bold;
         position: absolute;
         top: 24rem;
