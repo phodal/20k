@@ -6,19 +6,27 @@
 
 
     window.onload = function () {
-        var svg = new Walkway({
+        new Walkway({
             selector: '#logo',
             easing: 'easeInOutCubic',
             duration: 2100
         }).draw();
     };
 
-    setTimeout(function() {
+    window.odometerOptions = {
+        auto: true,
+        format: '(,ddd).dd',
+        duration: 3000,
+        theme: 'car',
+        animation: 'count'
+    };
+
+    setTimeout(function () {
         $(document).ready(function () {
             var $upArrow = $('.up-arrow');
 
             // init Swiper
-            new Swiper('.swiper-container', {
+            var swiper = new Swiper('.swiper-container', {
                 mousewheelControl: true,
                 effect: 'coverflow',    // slide, fade, coverflow or flip
                 speed: 400,
@@ -40,6 +48,11 @@
                 onInit: function (swiper) {
                     animationControl.initAnimationItems();  // get items ready for animations
                     animationControl.playAnimation(swiper); // play animations of the first slide
+
+                    $('.odometer').html(10000);
+                    setTimeout(function () {
+                        odometer.innerHTML = 20000;
+                    }, 800);
                 },
                 onTransitionStart: function (swiper) {     // on the last slide, hide .btn-swipe
                     if (swiper.activeIndex === swiper.slides.length - 1) {
@@ -50,6 +63,12 @@
                 },
                 onTransitionEnd: function (swiper) {       // play animations of the current slide
                     animationControl.playAnimation(swiper);
+                    if (swiper.activeIndex === 1) {
+                        $(".projects").typed({
+                            strings: ["注册于 2010 年 11 月 08 号", "创建了：126+ 个项目", "第一个项目是 emacs 的配置 emacs.d"],
+                            typeSpeed: 100
+                        });
+                    }
                 },
                 onTouchStart: function (swiper, event) {
 
@@ -59,19 +78,6 @@
             // hide loading animation since everything is ready
             $('.loading-overlay').slideUp();
 
-            window.odometerOptions = {
-                auto: true, // Don't automatically initialize everything with class 'odometer'
-                format: '(,ddd).dd', // Change how digit groups are formatted, and how many digits are shown after the decimal point
-                duration: 3000, // Change how long the javascript expects the CSS animation to take
-                theme: 'car', // Specify the theme (if you have more than one theme css file on the page)
-                animation: 'count' // Count is a simpler animation method which just increments the value,
-                                   // use it when you're looking for something more subtle.
-            };
-
-            $('.odometer').html(10000);
-            setTimeout(function () {
-                odometer.innerHTML = 20000;
-            }, 800);
         });
     }, 3000);
 })();
