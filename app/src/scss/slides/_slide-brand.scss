@@ -1,0 +1,51 @@
+.slide-brand {
+  background-color: #eee;
+
+  .item-image {
+    width: 18rem;
+    height: 18rem;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .item-text {
+    width: 18rem;
+    color: #707ca8;
+    font-size: 1.6rem;
+    font-weight: bold;
+    position: absolute;
+    top: 24rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .item-text-2 {
+    width: 18rem;
+    color: #707ca8;
+    font-size: 1.6rem;
+    font-weight: bold;
+    position: absolute;
+    top: 26rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  a {
+    color: #707ca8;
+  }
+
+  .up-arrow i {
+    color: #30ea30;
+  }
+}
