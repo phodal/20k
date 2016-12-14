@@ -4,15 +4,6 @@
     // load dependencies
     var animationControl = require('./animation-control.js');
 
-
-    window.onload = function () {
-        new Walkway({
-            selector: '#logo',
-            easing: 'easeInOutCubic',
-            duration: 2100
-        }).draw();
-    };
-
     window.odometerOptions = {
         auto: true,
         format: '(,ddd).dd',
@@ -21,10 +12,16 @@
         animation: 'count'
     };
 
-    setTimeout(function () {
-        $(document).ready(function () {
-            var $upArrow = $('.up-arrow');
 
+    $(document).ready(function () {
+        var $upArrow = $('.up-arrow');
+        new Walkway({
+            selector: '#logo',
+            easing: 'easeInOutCubic',
+            duration: 2100
+        }).draw();
+
+        setTimeout(function () {
             // init Swiper
             var swiper = new Swiper('.swiper-container', {
                 mousewheelControl: true,
@@ -77,7 +74,6 @@
 
             // hide loading animation since everything is ready
             $('.loading-overlay').slideUp();
-
-        });
-    }, 3000);
+        }, 3000);
+    });
 })();
