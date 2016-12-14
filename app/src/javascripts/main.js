@@ -62,7 +62,7 @@
                     animationControl.playAnimation(swiper);
                     if (swiper.activeIndex === 1) {
                         $(".projects").typed({
-                            strings: ["注册于 2010 年 11 月 08 号", "创建了：126+ 个项目", "第一个项目是 emacs 的配置 emacs.d"],
+                            strings: ["注册时间： 2010 年 11 月 08 号", "创建项目： 126+ ", "第一个项目是存放 emacs 的配置"],
                             typeSpeed: 100
                         });
                     }
