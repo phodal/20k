@@ -28,6 +28,8 @@
                 effect: 'coverflow',    // slide, fade, coverflow or flip
                 speed: 400,
                 direction: 'vertical',
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
                 fade: {
                     crossFade: false
                 },
