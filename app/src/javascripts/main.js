@@ -50,7 +50,7 @@
 
                     $('.odometer').html(10000);
                     setTimeout(function () {
-                        odometer.innerHTML = 20000;
+                        odometer.innerHTML = 19999;
                     }, 800);
                 },
                 onTransitionStart: function (swiper) {     // on the last slide, hide .btn-swipe
