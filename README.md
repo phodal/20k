@@ -4,6 +4,8 @@
 > A HTML5 for  remember 20k stars, and prepare test for Growth Paper
 > Release
 
+基于：[wechat-h5-boilerplate](https://github.com/panteng/wechat-h5-boilerplate)
+
 LICENSE
 ---
 
